@@ -14,15 +14,40 @@ browser.runtime.onMessage.addListener(function (message) {
     if (message === 'colorize') {
         if (running === false) {
             running = true;
-            const els = document.querySelectorAll("body *");
-            interval = setInterval(() => {
-                let el = els[Math.floor(Math.random() * els.length)];
-            el.style.backgroundColor = getRandomColor();
-            el.style.color = getRandomColor();
-        }, 100);
+
+
+
+            const elements = document.querySelectorAll("body *");
+
+            function findBlocks(parentNode,basicNodes){
+                for(let childNode of parentNode.childNodes){
+                    if(Math.random()>0.05){
+                        basicNodes.push(childNode);
+                    }else{
+                        findBlocks(childNode,basicNodes);
+                    }
+                }
+            }
+
+
+            const basicNodes = [];
+            findBlocks(document.body,basicNodes);
+
+            console.log(basicNodes);
+            for(let node of basicNodes){
+
+                console.log(node);
+                node.style.border = '1px dotted red';
+            }
+
+
+
+
+
+
+
         } else {
             running = false;
-            clearInterval(interval);
         }
     }
 });
