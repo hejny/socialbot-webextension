@@ -6,6 +6,7 @@ export default observer(({uiDataModel}: { uiDataModel: UIDataModel }) => {
     return (
         <div style={{
             position: 'fixed',
+            zIndex: 99999,
             bottom: 10,
             right: 10,
             padding: 10,
