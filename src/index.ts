@@ -1,27 +1,29 @@
+import ui from './ui';
+import UIDataModel from './ui/UIDataModel';
 import * as $ from 'jquery';
 
 
-(window as any).browser.runtime.onMessage.addListener((message:any)=>{
-    if (message === 'socialbot') {+
 
-        alert('socialbot');
-        alert($('button'));
+//console.log($('button'));
 
 
-        for(const element of $('button').toArray()) {
+const uiDataModel = new UIDataModel;
 
-            console.log(element.innerText);
-            if(element.innerText==='Follow'){
-                console.log(element);
-            }
-        }
 
-        /*$('button').each((element: HTMLElement)=>{
+ui(uiDataModel);
 
 
 
-        });*/
+for(const element of $('button').toArray()) {
 
-
+    console.log(element.innerText);
+    if(element.innerText==='Follow'){
+        console.log(element);
     }
-});
+}
+
+/*$('button').each((element: HTMLElement)=>{
+
+
+
+});*/

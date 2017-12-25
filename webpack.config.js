@@ -2,8 +2,7 @@ module.exports = {
 
     output: {
         filename: 'socialbot.js',
-        path: __dirname + "/dist/",
-        libraryTarget: "commonjs"
+        path: __dirname + "/dist/"
     },
 
     entry: {

@@ -4,24 +4,14 @@
   "version": "0.0.1",
   "author": "Pavol Hejný",
   "description": "Automatical behavior on social networks.",
-  "background": {
-    "scripts": ["lib/jquery-3.2.1.min.js","src/background.js"]
-  },
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "*://*.instagram.com/*"
       ],
       "js": [
-        "src/content.js"
+        "dist/socialbot.js"
       ]
     }
-  ],
-  "page_action": {
-    "browser_style": true,
-    "default_icon": {
-      "48": "icons/48.png"
-    },
-    "default_title": "Gravity!"
-  }
+  ]
 }
