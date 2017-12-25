@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Gravity",
-  "version": "1.0.3",
+  "name": "Socialbot",
+  "version": "0.0.1",
   "author": "Pavol Hejný",
-  "description": "Make your websites happier.",
+  "description": "Automatical behavior on social networks.",
   "background": {
-    "scripts": ["src/background.js"]
+    "scripts": ["lib/jquery-3.2.1.min.js","src/background.js"]
   },
   "content_scripts": [
     {

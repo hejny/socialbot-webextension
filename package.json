@@ -1,0 +1,19 @@
+{
+  "name": "socialbot",
+  "version": "0.0.1",
+  "description": "Touch and mouse controller for web apps and games",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Pavol Hejný",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^3.1.1",
+    "ts-node": "^4.0.1",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.2.17",
+    "jquery": "^3.2.1"
+  }
+}
