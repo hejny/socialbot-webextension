@@ -26,6 +26,7 @@ function tickFollow() {
         if (buttonElement.innerText === 'Follow') {
             //console.log(buttonElement);
             buttonElement.click();
+            scrollParent(buttonElement, buttonElement.clientHeight*2);
             follewed++;
 
             break;
@@ -36,7 +37,20 @@ function tickFollow() {
 }
 
 
-function tickScroll() {
+function scrollParent(element: HTMLElement, height: number) {
+    if (window.getComputedStyle(element).overflowY === 'scroll') {
+
+        element.scrollTop += height;
+
+    } else {
+        if(element.parentElement){
+            scrollParent(element.parentElement, height);
+        }
+
+    }
+}
+
+/*function tickScroll() {
     //console.groupCollapsed('tick');
     let scrolled = 0;
     const list = document.body.querySelectorAll('div');
@@ -54,22 +68,20 @@ function tickScroll() {
     }
     console.log(`Scrolled ${scrolled} divs.`);
     //console.groupEnd();
-}
+}*/
 
 
-function clock(tickCb:()=>void, delayCb:()=>number) {
+function clock(tickCb: () => void, delayCb: () => number) {
     setTimeout(() => {
         if (uiDataModel.started) {
             tickCb();
         }
-        clock(tickCb,delayCb);
+        clock(tickCb, delayCb);
     }, delayCb())
 }
 
 
-
-clock(tickFollow,()=>random(28, 36) * 1000);
-clock(tickScroll,()=>random(1, 2) * 1000);
+clock(tickFollow, () => random(28, 36) * 1000);
 
 
 /*try {
