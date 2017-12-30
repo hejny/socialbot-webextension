@@ -13,5 +13,9 @@
         "dist/socialbot.js"
       ]
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "static/options.html"
+  },
+  "permissions": ["storage"]
 }
