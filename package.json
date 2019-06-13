@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Touch and mouse controller for web apps and games",
   "scripts": {
-    "build": "webpack --watch",
     "build": "webpack",
     "prettier": "prettier --config .prettierrc --write \"src/**/*.{ts,tsx}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier"
