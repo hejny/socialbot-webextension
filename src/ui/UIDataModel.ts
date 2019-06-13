@@ -1,7 +1,5 @@
-import {observable} from "mobx";
+import { observable } from 'mobx';
 
 export default class UIDataModel {
-
     @observable started = false;
-
 }
