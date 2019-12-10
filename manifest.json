@@ -1,16 +1,20 @@
 {
   "manifest_version": 2,
   "name": "Socialbot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Pavol Hejný",
-  "description": "Automatical behavior on social networks.",
+  "description": "Scrape data from social networks",
   "content_scripts": [
     {
       "matches": [
-        "*://*.instagram.com/*"
+        "*://*.slack.com/*"
+      ],
+      "css": [
+        "dist/style.css"
       ],
       "js": [
-        "dist/socialbot.js"
+        "https://code.jquery.com/jquery-3.4.1.min.js",
+        "dist/index.js"
       ]
     }
   ],
