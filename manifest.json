@@ -10,11 +10,11 @@
         "*://*.slack.com/*"
       ],
       "css": [
-        "dist/style.css"
+        "src/style.css"
       ],
       "js": [
-        "https://code.jquery.com/jquery-3.4.1.min.js",
-        "dist/index.js"
+        "src/jquery-3.4.1.min.js",
+        "src/index.js"
       ]
     }
   ],

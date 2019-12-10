@@ -1,5 +1,32 @@
 #download-contacts{
+    z-index: 999999;
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    left: 30px;
+    bottom: 50px;
+
+    
+    font-size: 15px;
+    height: 36px;
+    min-width: 80px;
+    padding: 0 12px 1px;
+    transition: all 80ms linear;
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    --saf-0: rgba(var(--sk_primary_foreground,29,28,29),0.3);
+    border: 1px solid var(--saf-0);
+    background-clip: padding-box;
+    font-weight: 700;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
 }

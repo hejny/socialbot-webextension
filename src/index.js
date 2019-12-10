@@ -134,17 +134,24 @@ function downloadVcard(filename, contacts) {
     document.body.removeChild(element);
 }
 
-window.downloadContacts = (async () => {
-    const slackContactsScraper = new SlackContactsScraper();
-    const contacts = await slackContactsScraper.scrape();
-
-    downloadVcard(slackContactsScraper.workspaceName, contacts);
-})();
-
 $(() => {
-    $('body').appendChild(`
-    <button id="download-contacts" onclick="window.downloadContacts();">Download contacts</button>
+    $('body').append(`
+    <button id="download-contacts">Download contacts</button>
     `);
+
+    $('#download-contacts').click(async () => {
+        if (!window.location.toString().match(/\/directory$/)) {
+            if (confirm(`You need to be at .../directory path with directory opened. Do you want to go there now?`)) {
+                window.location = window.location + '/directory';
+            }
+            return;
+        }
+
+        const slackContactsScraper = new SlackContactsScraper();
+        const contacts = await slackContactsScraper.scrape();
+
+        downloadVcard(slackContactsScraper.workspaceName, contacts);
+    });
 });
 
 // Scrolling detection: $('*').on( 'scroll' ,(event)=>console.log(event.target))
