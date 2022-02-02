@@ -8,7 +8,7 @@
     "prettier-watch": "onchange \"src/**/*.{js,ts,tsx}\" -- prettier --config .prettierrc --write {{changed}}"
   },
   "author": "Pavol Hejný",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@types/jquery": "3.3.31",
     "@types/react": "15.6.28",
