@@ -1,4 +1,4 @@
-# SocialBot web-extension
+# 🧑🏿‍🤝‍🧑🏿 SocialBot web-extension
 
 <!--Badges-->
 
