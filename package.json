@@ -1,1 +1,31 @@
-undefined
+{
+    "name": "socialbot",
+    "version": "0.0.2",
+    "description": "Scrape data from social networks",
+    "scripts": {
+        "build": "tsc",
+        "prettier": "prettier --config .prettierrc --write \"src/**/*.{js,ts,tsx}\"",
+        "prettier-watch": "onchange \"src/**/*.{js,ts,tsx}\" -- prettier --config .prettierrc --write {{changed}}"
+    },
+    "author": "Pavol Hejný",
+    "license": "SEE LICENSE IN LICENSE",
+    "dependencies": {
+        "@types/jquery": "3.3.31",
+        "@types/react": "15.6.28",
+        "@types/react-dom": "15.5.11",
+        "jquery": "3.5.0",
+        "mobx": "3.4.1",
+        "mobx-react": "4.3.5",
+        "onchange": "6.1.0",
+        "prettier": "1.19.1",
+        "react": "0.14.9",
+        "react-dom": "0.14.9",
+        "ts-loader": "3.1.1",
+        "ts-node": "4.0.1",
+        "typescript": "2.6.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hejny/socialbot-webextension"
+    }
+}
