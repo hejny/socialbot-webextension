@@ -1,6 +1,6 @@
 {
     "name": "socialbot",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "description": "Scrape data from social networks",
     "scripts": {
         "build": "tsc",
